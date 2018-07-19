@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #div1{
+    margin: 0 0;
+    width: 12%;
+    height: 300px;
+    background:#c0c0c0;
+}
+#div2{
+    position: relative;
+    top: 10px;
+    left: 5%;
+    width: 90%;
+    height:280px;
+    background:#000000;
+    border-radius: 5%;
+}
+#Calculator{
+    position: absolute;
+    bottom: 0px;
+    border-collapse: separate;
+    border-spacing: 9px;
+}
+button{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border:1px solid #606060;
+}
+#screenName{
+    position: absolute;
+    top: 60px;
+    right: 12px;
+    width: 127px;
+    height: 20px;
+    font-size: 20px;
+    color: white;
+    background: black;
+    border: 1px solid black;
+}
+td{
+    margin-left: 5px;
+}
+#c,#none,#per,#divid,#mul,#min,#plus,#GT{
+    opacity:0.4;
+}
+#eva{
+    background: #f40;
+}
+#zero,#point,#one,#two,#three,#four,#five,#six,#seven,#eight,#nine{
+    background: black;
+    color: #b8b8b8;
+}
+button:hover{
+    font-size: 20px;
+}
+#line1{
+    position: relative;
+    top: 10px;
+    left: 10px;
+}
+#line2{
+    position: relative;
+    top: 70px;
+    left: 10px;
+}
+#name{
+    position: absolute;
+    left: 35px;
+    margin-top: -2px;
+    color: antiquewhite;
+}
+    </style>
+</head>
+<body>
+    <div id="div1">
+        <div id="div2">
+            <p id="name">Calculator</p>
+            <div id="line1" style=" width:130px;height:10px;border-bottom:1px solid #606060"></div>
+            <div id="line2" style=" width:130px;height:10px;border-bottom:1px solid #606060"></div>
+            <div id="div3"><input id="screenName" value="" onfocus="jsq(this)"></input></div>
+            <table id="Calculator">
+                <tr>
+                    <td><button id="c" value="c" onclick="clearNum()">c</button></td>
+                    <td><button id="Back" value="Back" onclick="tuiGe()">B</button></td>
+                    <td><button id="per" value="%" onclick="jsq(this.id)">%</button></td>
+                    <td><button id="divid" value="/" onclick="jsq(this.id)">/</button></td>
+                </tr>
+                <tr>
+                    <td><button id="seven" value="7" onclick="jsq(this.id)">7</button></td>
+                    <td><button id="eight" value="8" onclick="jsq(this.id)">8</button></td>
+                    <td><button id="nine" value="9" onclick="jsq(this.id)">9</button></td>
+                    <td><button id="mul" value="*" onclick="jsq(this.id)">*</button></td>
+                </tr>
+                <tr>
+                    <td><button id="four" value="4" onclick="jsq(this.id)">4</button></td>
+                    <td><button id="five" value="5" onclick="jsq(this.id)">5</button></td>
+                    <td><button id="six" value="6" onclick="jsq(this.id)">6</button></td>
+                    <td><button id="min" value="-" onclick="jsq(this.id)">-</button></td>
+                </tr>
+                <tr>
+                    <td><button id="one" value="1" onclick="jsq(this.id)">1</button></td>
+                    <td><button id="two" value="2" onclick="jsq(this.id)">2</button></td>
+                    <td><button id="three" value="3" onclick="jsq(this.id)">3</button></td>
+                    <td><button id="plus" value="+" onclick="jsq(this.id)">+</button></td>
+                </tr>
+                <tr>
+                    <td><button id="GT">Gt</button></td>
+                    <td><button id="zero" value="0" onclick="jsq(this.id)">0</button></td>
+                    <td><button id="point" value="." onclick="jsq(this.id)">.</button></td>
+                    <td><button id="eva" onclick="eva()" value="=">=</button></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
